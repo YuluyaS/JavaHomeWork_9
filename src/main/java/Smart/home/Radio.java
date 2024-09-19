@@ -3,13 +3,14 @@ package Smart.home;
 public class Radio {
     private int currentVolume;
     private int currentStation;
-    private int maxStations;
+    private final int maxStations;
 
     public Radio() {
-        this.maxStations =9;
+        this.maxStations = 9;
     }
+
     public Radio(int stationsCount) {
-        this.maxStations = stationsCount -1;
+        this.maxStations = stationsCount - 1;
     }
 
     public void next() {
@@ -18,10 +19,10 @@ public class Radio {
             return;
         }
         currentStation = 0;
-        }
+    }
 
     public void prev() {
-        if (currentStation !=0) {
+        if (currentStation != 0) {
             currentStation--;
         } else {
             currentStation = maxStations;

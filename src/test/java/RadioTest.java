@@ -4,6 +4,17 @@ import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 
 
+@Test
+public void test() {
+    Radio radio = new Radio(20);
+
+    radio.setCurrentStation(15);
+
+    int expected = 15;
+    int actual = radio.getCurrentStation();
+    Assertions.assertEquals(expected, actual);
+}
+
 @Nested
 class RadioTest {
 
@@ -18,16 +29,6 @@ class RadioTest {
         Assertions.assertEquals(expected, actual);
     }
 }
-    @Test
-    public void test() {
-        Radio radio = new Radio(20);
-
-        radio.setCurrentStation(15);
-
-        int expected = 15;
-        int actual = radio.getCurrentStation();
-        Assertions.assertEquals(expected, actual);
-    }
 }
 
 
