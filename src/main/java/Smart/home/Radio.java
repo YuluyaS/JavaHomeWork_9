@@ -57,5 +57,35 @@ public class Radio {
 
         this.currentStation = currentStation;
     }
+
+    public void increaseVolume() {
+
+        if (currentVolume >= 0 & currentVolume < 100) {
+            this.currentVolume += 1;
+        }
+
+    }
+
+    public void decreaseVolume() {
+        if (currentVolume >= 1 & currentVolume <= 100) {
+            this.currentVolume -= 1;
+        }
+    }
+
+    public void TurnUpVolumeOne() {
+        if (currentVolume < 100) {
+            currentVolume = currentVolume + 1;
+        } else {
+            currentStation = 100;
+        }
+    }
+
+    public void SoundIsLessThanZero() {
+        if (currentVolume < 0) {
+            currentVolume = currentVolume - 1;
+        } else {
+            currentStation = 0;
+        }
+    }
 }
 
