@@ -1,9 +1,9 @@
 package Smart.home;
 
 public class Radio {
+    private final int maxStations;
     private int currentVolume;
     private int currentStation;
-    private final int maxStations;
 
     public Radio() {
         this.maxStations = 9;
