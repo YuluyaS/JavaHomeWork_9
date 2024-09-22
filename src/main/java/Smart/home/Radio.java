@@ -2,17 +2,9 @@ package Smart.home;
 
 public class Radio {
 
-    private int currentVolume;
-
-    private int minStation = 0;
     private int maxStation = 9;
-    private int currentStation;
-
-    public Radio() {
-        this.minStation = minStation;
-        this.maxStation = maxStation;
-        this.currentStation = minStation;
-    }
+    private int currentVolume;
+    private int currentStation = 0;
 
     public void next() {
         if (currentStation != maxStation) {
