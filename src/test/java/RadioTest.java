@@ -11,8 +11,18 @@ public class RadioTest {
 
         Radio radio = new Radio();
 
-        int expected = 0;
-        int actual = radio.getCurrentStation();
+        int expected = 10;
+        int actual = radio.getCountStations();
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void radioWithCountStations() {
+
+        Radio radio = new Radio(100);
+
+        int expected = 100;
+        int actual = radio.getCountStations();
         Assertions.assertEquals(expected, actual);
     }
 
@@ -192,21 +202,3 @@ public class RadioTest {
 
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
